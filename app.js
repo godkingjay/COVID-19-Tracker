@@ -2,17 +2,17 @@ const endpoint = 'https://raw.githubusercontent.com/owid/covid-19-data/master/pu
 let covidLatest = {};
 
 let uData = {
-  abbr: '',
+  abbr: 'AFG',
   country: ''
 };
 
 const getJSON = async url => {
   const response = await fetch(url);
-  if(!response.ok) // check if response worked (no 404 errors etc...)
+  if(!response.ok)
     throw new Error(response.statusText);
 
-  const data = response.json(); // get JSON from the response
-  return data; // returns a promise, which resolves to this data value
+  const data = response.json();
+  return data;
 }
 
 console.log('Fetching data...');
