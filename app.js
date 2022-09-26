@@ -1,6 +1,11 @@
 const endpoint = 'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/latest/owid-covid-latest.json';
 let covidLatest = {};
 
+let uData = {
+  abbr: '',
+  country: ''
+};
+
 const getJSON = async url => {
   const response = await fetch(url);
   if(!response.ok) // check if response worked (no 404 errors etc...)
