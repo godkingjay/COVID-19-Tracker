@@ -22,3 +22,11 @@ getJSON(endpoint).then(data => {
   }).catch(error => {
   console.error(error);
 });
+
+const inputAbbr = document.querySelector('#inputAbbr');
+
+inputAbbr.addEventListener('input', (e) => {
+  console.log(e.target);
+  uData.abbr = e.target.value;
+  document.querySelector('.text').textContent = Object.keys(covidLatest)[uData.abbr];
+});
