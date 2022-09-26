@@ -28,5 +28,5 @@ const inputAbbr = document.querySelector('#inputAbbr');
 inputAbbr.addEventListener('input', (e) => {
   console.log(e.target);
   uData.abbr = e.target.value;
-  document.querySelector('.text').textContent = Object.keys(covidLatest)[uData.abbr];
+  document.querySelector('.text').textContent = JSON.stringify(covidLatest[uData.abbr]);
 });
